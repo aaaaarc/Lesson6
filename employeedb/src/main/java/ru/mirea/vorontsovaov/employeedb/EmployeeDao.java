@@ -10,14 +10,14 @@ import java.util.List;
 
 @Dao
 public interface EmployeeDao {
-    @Query("SELECT * FROM employee")
+    @Query("SELECT * FROM Employee")
     List<Employee> getAll();
-    @Query("SELECT * FROM employee WHERE id = :id")
+    @Query("SELECT * FROM Employee WHERE id = :id")
     Employee getById(long id);
     @Insert
-    void insert(Employee employee);
+    void insert(Employee hero);
     @Update
-    void update(Employee employee);
+    void update(Employee hero);
     @Delete
-    void delete(Employee employee);
+    void delete(Employee hero);
 }
