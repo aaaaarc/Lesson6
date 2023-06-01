@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         EmployeeDao employeeDao = db.employeeDao();
         Employee employee = new Employee();
         employee.id = 1;
-        employee.name = "John Smith";
-        employee.salary = 10000;
+        employee.name = "Голум";
+        employee.description = "Раздвоение личности, крадет золотые кольца";
         employeeDao.insert(employee);
         List<Employee> employees = employeeDao.getAll();
         employee = employeeDao.getById(1);
-        employee.salary = 20000;
+        employee.description = "Становится невидимым";
         employeeDao.update(employee);
-        Log.d(TAG, employee.name + " " + employee.salary);
+        Log.d(TAG, employee.name + " " + employee.description);
     }
 }
